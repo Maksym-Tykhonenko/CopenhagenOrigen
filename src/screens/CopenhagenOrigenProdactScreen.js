@@ -61,6 +61,7 @@ const CopenhagenOrigenProdactScreen = ({navigation, route}) => {
     'googlepay://',
     'applepay://',
     'skrill',
+    'neteller',
   ];
 
   //**івент push_subscribe
@@ -214,8 +215,8 @@ const CopenhagenOrigenProdactScreen = ({navigation, route}) => {
 
   const handleNavigationStateChange = navState => {
     const {url} = navState;
-    console.log('NavigationState: ', url);
-    //console.log('navState: ', navState);
+    //console.log('NavigationState: ', url);
+    console.log('navState: ', navState);
     if (
       url.includes(
         'https://api.paymentiq.io/paymentiq/api/piq-redirect-assistance',
@@ -382,10 +383,10 @@ const CopenhagenOrigenProdactScreen = ({navigation, route}) => {
           'tel:*',
           'mailto:*',
         ]}
-        //onShouldStartLoadWithRequest={onShouldStartLoadWithRequest}
-        //onNavigationStateChange={handleNavigationStateChange}
+        onShouldStartLoadWithRequest={onShouldStartLoadWithRequest}
+        onNavigationStateChange={handleNavigationStateChange}
         source={{
-          uri: INITIAL_URL_KEY,
+          uri: product,
         }}
         textZoom={100}
         allowsBackForwardNavigationGestures={true}
@@ -399,6 +400,7 @@ const CopenhagenOrigenProdactScreen = ({navigation, route}) => {
         style={{flex: 1}}
         ref={refWebview}
         userAgent={customUserAgent}
+        //mixedContentMode="always"
       />
 
       <View
