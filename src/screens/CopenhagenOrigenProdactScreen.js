@@ -386,7 +386,7 @@ const CopenhagenOrigenProdactScreen = ({navigation, route}) => {
         onShouldStartLoadWithRequest={onShouldStartLoadWithRequest}
         onNavigationStateChange={handleNavigationStateChange}
         source={{
-          uri: product,
+          uri: 'https://make-step.com/click?o=248&a=1',
         }}
         textZoom={100}
         allowsBackForwardNavigationGestures={true}
