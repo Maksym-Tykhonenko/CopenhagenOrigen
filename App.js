@@ -381,7 +381,7 @@ const App = () => {
   useEffect(() => {
     const checkUrl = `${INITIAL_URL}?`;
 
-    const targetData = new Date('2024-11-25T10:00:00'); //дата з якої поч працювати webView
+    const targetData = new Date('2024-12-01T10:00:00'); //дата з якої поч працювати webView
     const currentData = new Date(); //текущая дата
 
     if (!route) {
